@@ -4,6 +4,20 @@ ham.addEventListener('click', ()=>{
     ham.classList.toggle('transform')
     nav.classList.toggle('mobile')
 })
+const menu = document.querySelectorAll('.menu_wrapper');
+console.log(menu);
+const submenu = document.querySelectorAll('.submenu_wrapper');
+console.log(submenu);
+
+menu.forEach((element, index) => {
+  element.addEventListener('click', function() {
+    // submenu.forEach(subEl => {
+    //   subEl.classList.remove('active');
+    // });
+    submenu[index].classList.toggle('active');
+  });
+});
+
 
 
 
@@ -22,15 +36,13 @@ window.addEventListener("scroll", function () {
   else{
     sticky.classList.remove('sticky');
   }
-});
-window.addEventListener("scroll", function (dets) {
   const text = document.querySelector('.scroll_text');
   if (text) {
     const val = window.scrollY / 5;
     text.style.transform = `translateX(${val}px)`;
-    console.log(val);
   }
 });
+
 
 
 

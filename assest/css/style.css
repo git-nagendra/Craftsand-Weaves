@@ -48,13 +48,16 @@ a {
 .for_pc_none {
   display: none;
 }
+.for_pc_none .logo{
+  width: 230px;
+  height: 42px;
+}
 .ham {
   height: 40px;
   width: 40px;
-  border: 1px solid red;
   position: relative;
   overflow: hidden;
-  top: 9px;
+  top: 0px;
 }
 .ham span {
   position: absolute;
@@ -64,12 +67,15 @@ a {
   height: 3px;
   width: 28px;
   transition: 0.4s ease-in-out;
+  border-radius: 1rem;
 }
 .ham span:nth-child(1) {
   transform: translateY(8px);
+  width: 21px;
 }
 .ham span:nth-child(3) {
   transform: translateY(-8px);
+  width: 21px;
 }
 .transform span:nth-child(1) {
   transform: rotate(45deg);
@@ -79,6 +85,7 @@ a {
 }
 .transform span:nth-child(3) {
   transform: rotate(315deg);
+  
 }
 .logo {
   height: 55px;
@@ -151,7 +158,9 @@ nav ul li a:hover {
   transition: 0.4s ease-in;
   opacity: 0;
   visibility: hidden;
+  display: flex;
 }
+
 
 .sub_menu_Services,
 .sub_menu_width {
@@ -235,7 +244,8 @@ nav ul li a:hover {
 
 }
 .card_slider_1 {
-  padding: 60px 15px 40px  15px !important;
+  padding: 50px 15px 40px  15px !important;
+  
 }
 
 .swiper-slide img {
@@ -246,8 +256,8 @@ nav ul li a:hover {
 }
 .slider_btn{
   position: absolute;
-  top: -4px;
-  right: 10px;
+  top: -5px;
+  right: 14px;
   width: 100px;
   z-index: 99;
   line-height: 50px;
@@ -489,24 +499,56 @@ nav ul li a:hover {
   border: 1px solid var(--red) !important;
   color: var(--red);
 }
+.about_bg_color{
+  background: #f7f9fa;
+}
 @media only screen and (max-width: 1080px) {
   nav {
     position: fixed;
     top: 0;
     left: -100%;
     z-index: 999;
-    width: 60%;
+    width: 80%;
     height: 100vh;
-    background: #ffffff;
-    padding: 30px;
+    background: #c18181;
+    padding: 15px 20px;
     transition: 0.6s ease-in-out;
+    z-index: 99;
+    overflow-y: scroll;
   }
+  .menu_wrapper .active{
+    display: flex !important;
+  }
+  .sub_menu_account, .submenu_wrapper {
+    position: initial;
+    top: 56px;
+    left: -5px;
+    height: inherit;
+    width:initial;
+    z-index: 99;
+    transform: initial;
+    transition: 0.4s ease-in;
+    opacity: initial;
+    visibility: initial;
+    flex-direction: column;
+    display: none;
+    background: initial;
+}
+
   nav ul {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 10px;
   }
+  nav ul li:nth-child(4){
+    order: -1;
+  }
+  nav ul li:nth-child(4) .logo {
+    height: 38px;
+    width: 200px;
+    
+}
   .mobile {
     left: 0;
   }
@@ -515,4 +557,7 @@ nav ul li a:hover {
     align-content: center;
     justify-content: space-between;
   }
+  .for_padding {
+    padding: 0px 0;
+}
 }
