@@ -571,6 +571,9 @@ nav ul li a:hover {
 .payment{
   height: 25px;
 }
+.locatoin a{
+  color: var(--text);
+}
 
 @media only screen and (max-width: 1080px) {
   nav {
