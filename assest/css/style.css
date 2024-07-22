@@ -18,6 +18,7 @@ li,
 a {
   text-decoration: none !important;
   list-style: none !important;
+  
 }
 
 /* .header{
@@ -220,6 +221,14 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
 }
+.detail_slider1 {
+  height: 55vh !important;
+  padding-bottom: 5px !important;
+  border: 1px solid rgba(128, 128, 128, 0.409);
+}
+.detail_slider2 {
+  height: 10vh !important;
+}
 .swiper_wrapper {
   position: relative;
 }
@@ -235,6 +244,9 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
 }
+.swiper-slide a{
+  color: var(--text);
+}
 .swiper-pagination1 {
   position: absolute;
   text-align: center;
@@ -242,10 +254,17 @@ nav ul li a:hover {
   transform: translate3d(0, 0, 0);
   z-index: 10;
 }
+
 .card_slider_1 {
   padding: 50px 15px 40px 15px !important;
 }
-
+.detail_slider2 .swiper-slide {
+  border: 1px solid rgba(128, 128, 128, 0.409);
+}
+.detail_slider2 .swiper-slide img,
+.detail_slider1 .swiper-slide img {
+  object-fit: contain !important;
+}
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -332,6 +351,9 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.badg_card{
+  position: initial;
 }
 .loader_wrapper {
   background: var(--red);
@@ -555,7 +577,7 @@ nav ul li a:hover {
   cursor: pointer;
   position: relative;
   overflow: hidden;
- font-size: 18px;
+  font-size: 18px;
 }
 .social_icon .fa-brands::before {
   position: absolute;
@@ -570,26 +592,143 @@ nav ul li a:hover {
   height: 100%;
   border-radius: 50%;
 }
-.social_icon .fa-brands:hover{
+.social_icon .fa-brands:hover {
   color: var(--red);
 }
-.footer_h{
+.footer_h {
   font-size: 22px;
   font-weight: 600;
 }
-.footer_list{
+.footer_list {
   padding: 0;
 }
-.Copyright{
+.Copyright {
   border-top: 1px solid rgb(215, 213, 213);
 }
-.payment{
+.payment {
   height: 25px;
 }
-.locatoin a{
+.locatoin a {
   color: var(--text);
 }
+.pagination {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/blog_img.png);
+  padding: 10rem 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
+.blog_text sub {
+  font-weight: 700;
+  font-size: 25px;
+  color: var(--white-color) !important;
+  position: relative;
+}
+.blog_text h5{
+  font-size: 14px !important;
+  color: var(--white-color) !important;
+}
+.home_menu a:nth-child(1){
+  color: var(--white-color);
+}
+.home_menu a:nth-child(1):hover{
+  color: var(--sub-menu-color);
+}
+.home_menu a:nth-child(3){
+  color: var(--sub-menu-color);
+}
+.crass{
+  height: 2px;
+  min-width:16px;
+  background: var(--sub-menu-color);
+  transform: rotateZ(295deg)
+}
+.card_inner{
+  -webkit-box-shadow: 0 1px 2px rgba(56, 65, 74, 0.24);
+    box-shadow: 0 1px 5px rgba(56, 65, 74, 0.24);
+    word-wrap: break-word;
+    background-color: var(--white-color);
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+.card_inner h6{
+  font-size: 14px;
+  font-weight: 400;
+}
+.card_inner sub{
+  font-size: 20px;
+  font-weight: 600;
+}
+.size{
+  height: 35px;
+  width: 35px;
+  border: 1px solid var(--red);
+  text-align: center;
+  line-height: 25px;
+  padding: 5px;
+  font-size: 12px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.size:focus,
+.size.active,
+.size:hover{
+  background: var(--red);
+  color: var(--white-color);
+}
+
+.color_option{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid rgba(102, 51, 153, 0);
+  transition: 0.4s ease-in-out;
+}
+.color_option:hover,
+.color_option.active{
+  border: 1px solid var(--red);
+}
+
+.color_option .green,
+.color_option .blue,
+.color_option .pink,
+.color_option .red{
+  background: red;
+  height: 17px;
+  min-width: 17px;
+  border-radius: 50%;
+}
+.color_option .green{
+  background: green;
+}
+.color_option .blue{
+  background: blue;
+}
+.color_option .pink{
+  background: pink;
+}
+.badge_ {
+  display: inline-block;
+  padding: .35em .65em;
+  font-size: .75em;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  background: var(--red);
+}
+.badge-soft-primary {
+  color: #405189;
+  background-color: rgba(64, 81, 137, .1);
+}
 @media only screen and (max-width: 1080px) {
   nav {
     position: fixed;

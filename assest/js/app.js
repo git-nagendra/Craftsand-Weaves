@@ -17,6 +17,22 @@ menu.forEach((element, index) => {
     submenu[index].classList.toggle('active');
   });
 });
+const colorPick = document.querySelectorAll('.color_option');
+
+colorPick.forEach(element => {
+  element.addEventListener('click', () => {
+    colorPick.forEach(el => el.classList.remove('active')); 
+    element.classList.add('active');
+  });
+});
+const size = document.querySelectorAll('.size');
+size.forEach(element => {
+  element.addEventListener('click', () => {
+    size.forEach(el => el.classList.remove('active')); 
+    element.classList.add('active');
+  });
+});
+
 
 
 
