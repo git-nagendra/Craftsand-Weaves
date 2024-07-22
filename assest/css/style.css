@@ -316,7 +316,7 @@ nav ul li a:hover {
   color: var(--text-mute);
 }
 .slider_card_wrapper {
-  border: 1px solid rgba(0, 0, 0, 0.091);
+  border: 1px solid rgba(0, 0, 0, 0.269);
   position: relative;
   border-radius: 0.35rem;
   transition: 0.3s ease-in-out;
@@ -326,8 +326,8 @@ nav ul li a:hover {
 }
 .badg {
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 8px;
+  left: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,6 +433,21 @@ nav ul li a:hover {
   max-width: 95px;
   padding: 5px 5px;
   font-size: 13px;
+}
+.card_btn:focus .fa-long-arrow-alt-right,
+.card_btn:hover .fa-long-arrow-alt-right {
+  transform: translateX(20px);
+  animation: myAnimation 1.2s infinite;
+}
+@keyframes myAnimation {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(12px);
+    opacity: 0;
+  }
 }
 .btn_style::before {
   position: absolute;
