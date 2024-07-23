@@ -612,13 +612,13 @@ nav ul li a:hover {
   color: var(--text);
 }
 .pagination {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(../images/blog_img.png);
   padding: 10rem 0;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 .blog_text sub {
@@ -654,6 +654,7 @@ nav ul li a:hover {
     background-clip: border-box;
     border: 0 solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
+
 }
 .card_inner h6{
   font-size: 14px;
@@ -729,6 +730,45 @@ nav ul li a:hover {
   color: #405189;
   background-color: rgba(64, 81, 137, .1);
 }
+.dis_text{
+  font-weight: 600;
+  font-size: 15px;
+}
+.Rating{
+  font-size: 13px;
+}
+.quality_input{
+  height: 40px !important;
+  width: 100px !important;
+}
+.form-control:focus {
+  color: var(--text);
+  background-color:var(--white-color) !important;
+  border-color: var(--red) !important;
+  outline: 0;
+  box-shadow: initial !important;
+}
+/* styles.css */
+.img-magnifier-container {
+  position: relative;
+  
+}
+
+#myimage {
+  width: 100%;
+  height: auto;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 1px solid #00000028;
+  cursor: none;
+  width: 300px;
+  height: 200px;
+  display: none; 
+  pointer-events: none; /* Ensure pointer events pass through */
+}
+
 @media only screen and (max-width: 1080px) {
   nav {
     position: fixed;
